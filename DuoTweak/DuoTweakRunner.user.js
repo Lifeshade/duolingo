@@ -2,7 +2,7 @@
 // @name			DuoTweak
 // @namespace		duolingo
 // @description		Useful add-on for Duolingo | visit https://www.duolingo.com/comment/7619770 | (c) Lifeshade aka HeadwayCourse, 2015
-// @version			1.0.0
+// @version			1.1.0
 // @author			Lifeshade aka HeadwayCourse, (c) 2015
 // @include			https://www.duolingo.com/*
 // @updateURL		https://rawgit.com/Lifeshade/duolingo/master/DuoTweak/DuoTweakRunner.meta.js
@@ -16,7 +16,9 @@ script.setAttribute("src", "https://rawgit.com/Lifeshade/duolingo/master/DuoTwea
 document.head.appendChild(script);
 
 setTimeout(function () {
-	if (!$("#dt-duotweak_logo").length) {
-		$(".topbar-brand").css({textIndent: "0", marginTop: "10px"}).append('<a href="/comment/7619770" style="display: block; color: white; margin-top: 35px; white-space: nowrap; text-decoration: underline;">Where is DuoTweak?</a>');
+	if ((window.duo !== undefined && duo.user === undefined || !window.duotweak_works) && !$("#dt-duotweak_logo").length) {
+		$("head").append('<style type="text/css">#dt-duotweak_lost {display: block; margin: 33px 0 0 10px; color: white; white-space: nowrap;} #dt-duotweak_lost:hover {text-decoration: underline;}</style>')
+		$(".topbar-brand").removeAttr("href").css({textIndent: "0"}).append('<a id="dt-duotweak_lost" href="/comment/7619770">Where is DuoTweak?</a>');
 	}
 }, 10000);
+
