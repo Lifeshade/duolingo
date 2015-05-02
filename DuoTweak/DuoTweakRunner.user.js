@@ -16,8 +16,8 @@ script.setAttribute("src", "https://rawgit.com/Lifeshade/duolingo/master/DuoTwea
 document.head.appendChild(script);
 
 setTimeout(function () {
-	if ((window.duo !== undefined && duo.user === undefined || !window.duotweak_works) && !$("#dt-duotweak_logo").length) {
-		$("head").append('<style type="text/css">#dt-duotweak_lost {display: block; margin: 33px 0 0 10px; color: white; white-space: nowrap;} #dt-duotweak_lost:hover {text-decoration: underline;}</style>')
+	if (!window.duotweak_works && duo.user !== undefined) {
+		$("head").append('<style type="text/css">#dt-duotweak_lost {display: block; margin: 33px 0 0 10px; color: white; white-space: nowrap;} #dt-duotweak_lost:hover {text-decoration: underline;}</style>');
 		$(".topbar-brand").removeAttr("href").css({textIndent: "0"}).append('<a id="dt-duotweak_lost" href="/comment/7619770">Where is DuoTweak?</a>');
 	}
 }, 10000);
