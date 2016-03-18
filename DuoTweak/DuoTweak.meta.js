@@ -5,7 +5,7 @@
 // @version			1.1.0
 // @author			Lifeshade aka HeadwayCourse, (c) 2015
 // @include			https://www.duolingo.com/*
-// @updateURL		https://rawgit.com/Lifeshade/duolingo/master/DuoTweak/DuoTweak.meta.js
-// @downloadURL		https://rawgit.com/Lifeshade/duolingo/master/DuoTweak/DuoTweak.user.js
+// @updateURL		https://raw.githubusercontent.com/Lifeshade/duolingo/master/DuoTweak/DuoTweak.meta.js
+// @downloadURL		https://raw.githubusercontent.com/Lifeshade/duolingo/master/DuoTweak/DuoTweak.user.js
 // @grant			none
 // ==/UserScript==
